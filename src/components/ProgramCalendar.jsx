@@ -132,7 +132,7 @@ function ProgramCalendar() {
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
-              <span className="text-xl font-semibold text-gray-800">
+              <span className="text-xl font-semibold text-black">
                 {months[currentDate.getMonth()]} {currentDate.getFullYear()}
               </span>
               <button
@@ -213,7 +213,7 @@ function ProgramCalendar() {
                   onClick={() => setSelectedDate(date)}
                   className="p-2 min-h-24 cursor-pointer hover:bg-blue-50 border border-gray-100 bg-white"
                 >
-                  <div className="font-semibold text-gray-700">{day}</div>
+                  <div className="font-semibold text-black">{day}</div>
                   {hasEvents && (
                     <div className="mt-1 space-y-1">
                       {dayEvents.map((event, index) => (
@@ -241,18 +241,18 @@ function ProgramCalendar() {
       {selectedDate && (
         <div className="mt-6 p-6 border rounded-lg bg-white shadow-md">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl font-semibold text-gray-800">
+            <h3 className="text-xl font-semibold text-black">
               Events for {selectedDate.toLocaleDateString()}
             </h3>
             <button
               onClick={() => setSelectedDate(null)}
-              className="text-gray-500 hover:text-gray-700"
+              className="text-black hover:text-black"
             >
               <X className="h-6 w-6" />
             </button>
           </div>
           {getEventsForDate(selectedDate).length === 0 ? (
-            <p className="text-gray-500">No events scheduled for this day.</p>
+            <p className="text-black">No events scheduled for this day.</p>
           ) : (
             getEventsForDate(selectedDate).map((event, index) => (
               <div
@@ -272,20 +272,21 @@ function ProgramCalendar() {
                     <X className="h-5 w-5" />
                   </button>
                 </div>
-                <div className="text-sm text-gray-700 mt-2 space-y-1">
+                <div className="text-sm text-black mt-2 space-y-1">
                   <p>
-                    <span className="font-medium">Time:</span> {event.time}
+                    <span className="font-medium text-black">Time:</span>{" "}
+                    {event.time}
                   </p>
                   <p>
-                    <span className="font-medium">Location:</span>{" "}
+                    <span className="font-medium text-black">Location:</span>{" "}
                     {event.location}
                   </p>
                   <p>
-                    <span className="font-medium">Description:</span>{" "}
+                    <span className="font-medium text-black">Description:</span>{" "}
                     {event.description}
                   </p>
                   <p>
-                    <span className="font-medium">Event Type:</span>{" "}
+                    <span className="font-medium text-black">Event Type:</span>{" "}
                     {event.isCollaboration
                       ? "Collaboration Event"
                       : "AfriSA Event"}
@@ -302,19 +303,19 @@ function ProgramCalendar() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white p-6 rounded-lg w-full max-w-md shadow-xl">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-black">
                 Add New Event
               </h3>
               <button
                 onClick={() => setShowAddEventForm(false)}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-black hover:text-black"
               >
                 <X className="h-6 w-6" />
               </button>
             </div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-black mb-1">
                   Event Title
                 </label>
                 <input
@@ -327,7 +328,7 @@ function ProgramCalendar() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-black mb-1">
                   Date
                 </label>
                 <input
@@ -340,7 +341,7 @@ function ProgramCalendar() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-black mb-1">
                   Time
                 </label>
                 <input
@@ -353,7 +354,7 @@ function ProgramCalendar() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-black mb-1">
                   Location
                 </label>
                 <input
@@ -366,7 +367,7 @@ function ProgramCalendar() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-black mb-1">
                   Description
                 </label>
                 <textarea
@@ -389,7 +390,7 @@ function ProgramCalendar() {
                 />
                 <label
                   htmlFor="isCollaboration"
-                  className="ml-2 block text-sm text-gray-700"
+                  className="ml-2 block text-sm text-black"
                 >
                   This is a collaboration event
                 </label>
@@ -398,7 +399,7 @@ function ProgramCalendar() {
                 <button
                   type="button"
                   onClick={() => setShowAddEventForm(false)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 font-medium"
+                  className="px-4 py-2 border border-gray-300 rounded-lg text-black hover:bg-gray-50 font-medium"
                 >
                   Cancel
                 </button>
