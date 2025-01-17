@@ -4,6 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: "/AfriSA-Calender",
+  assetPrefix: "/AfriSA-Calender",
 };
 
 module.exports = nextConfig;
