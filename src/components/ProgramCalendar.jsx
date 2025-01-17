@@ -324,7 +324,7 @@ function ProgramCalendar() {
                   required
                   value={formData.title}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                 />
               </div>
               <div>
@@ -337,7 +337,7 @@ function ProgramCalendar() {
                   required
                   value={formData.date}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                 />
               </div>
               <div>
@@ -350,7 +350,7 @@ function ProgramCalendar() {
                   required
                   value={formData.time}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                 />
               </div>
               <div>
@@ -363,7 +363,7 @@ function ProgramCalendar() {
                   required
                   value={formData.location}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                 />
               </div>
               <div>
@@ -375,7 +375,7 @@ function ProgramCalendar() {
                   required
                   value={formData.description}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                   rows={3}
                 />
               </div>
@@ -386,7 +386,7 @@ function ProgramCalendar() {
                   id="isCollaboration"
                   checked={formData.isCollaboration}
                   onChange={handleInputChange}
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded text-black"
                 />
                 <label
                   htmlFor="isCollaboration"
